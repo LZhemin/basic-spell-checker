@@ -92,7 +92,7 @@ def known_edits2(corpus, word):
 
     Args:
         corpus:  (defaultdictionary<str,int>) default dict of word and its freq
-        word:   (str) word to be searched for
+        word:    (str) word to be searched for
     Returns:
         set<str>
         Set of possible words after doing the delete,transpose,replace and insert op.
@@ -111,7 +111,7 @@ def known(corpus, _words):
 
     Args:
         corpus:  (defaultdictionary<str,int>) default dict of word and its freq
-        _words:   str) word to be searched for
+        _words:   (str) word to be searched for
     Returns:
         set<str>
         The subset of `words` that appear in the dictionary of corpus.
@@ -154,6 +154,15 @@ def cli_helper():
 
 
 if __name__ == "__main__":
+    """
+    Main script to do the spell correction
+	
+    Args:
+        words:   (list<str>) words to be autocorrected
+    Prints:
+        list<str>
+        Words after auto correction
+    """
     corpus_dict = get_freq()
     args = sys.argv[1:]
     if not args:
